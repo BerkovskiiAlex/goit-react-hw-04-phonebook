@@ -19,12 +19,7 @@ export const App = () => {
     if (dataOfState && dataOfState.length) {
       setContacts(dataOfState);
     }
-  }, []);
 
-  useEffect(() => {
-    if (!contacts.length) {
-      return;
-    }
     window.localStorage.setItem('localContacts', JSON.stringify(contacts));
   }, [contacts]);
 
