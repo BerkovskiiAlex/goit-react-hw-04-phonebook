@@ -22,6 +22,7 @@ export const App = () => {
     if (!contacts.length) {
       return;
     }
+    window.localStorage.setItem('localContacts', JSON.stringify(contacts));
   }, [contacts]);
 
   const handleAddContact = (name, number) => {
