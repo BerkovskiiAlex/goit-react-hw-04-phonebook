@@ -17,7 +17,7 @@ export const App = () => {
     }
     const dataOfState = JSON.parse(localStorage.getItem('localContacts'));
     if (dataOfState && dataOfState.length) {
-      setContacts({ contacts: dataOfState });
+      setContacts(dataOfState);
     }
   }, []);
 
